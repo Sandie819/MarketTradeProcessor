@@ -16,7 +16,7 @@ public class MarketTradeControllerWebIntegTest {
 	
 	public void testMarketTradeWeb() {
 		
-		ResponseEntity enity = restTemplate.getForEntity(url, responseType)
+		//ResponseEntity enity = restTemplate.getForEntity(url, responseType)
 	}
 	
 	

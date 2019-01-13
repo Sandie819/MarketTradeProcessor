@@ -58,10 +58,12 @@ public class TradeMessage {
 	}
 	public void setRate(double rate) {
 		this.rate = rate;
-	}
+	}	
+	
 	public LocalDateTime getTimePlaced() {
 		return timePlaced;
 	}
+	
 	public void setTimePlaced(LocalDateTime timePlaced) {
 		this.timePlaced = timePlaced;
 	}
@@ -71,6 +73,7 @@ public class TradeMessage {
 	public void setOriginatingCountry(String originatingCountry) {
 		this.originatingCountry = originatingCountry;
 	}
+	
 	@Override
 	public String toString() {
 		return "TradeMessage [userId=" + userId + ", currencyFrom=" + currencyFrom + ", currencyTo=" + currencyTo

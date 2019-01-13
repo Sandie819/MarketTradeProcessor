@@ -19,7 +19,6 @@ public class MarketTradeController {
 	@Autowired 
 	TradeMessageRepository tradeMessageRepository;
 	
-	
 	@GetMapping("/allTrades")
 	public List<TradeMessage> getTrades(){
 		return tradeMessageRepository.findAll();
