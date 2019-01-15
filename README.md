@@ -42,7 +42,12 @@ To View the consumed messages: http://localhost:8080/results
 * [Tomcat Jasper](https://javalibs.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper) - Embedded Container
 * HTML, CSS, JSP 
 
+## Future Considerations/Implementation
 
+* Security features, hasing passwords BCrypt. 
+* Stats for Charts - simple proding of total amounts by currencies/countries. 
+* Charts for visualisation - D3 with Angular
+* Validation on currency use ISO, countries. 
 
 ## Authors
 
