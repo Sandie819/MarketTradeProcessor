@@ -44,10 +44,10 @@ To View the consumed messages: http://localhost:8080/results
 
 ## Future Considerations/Implementation
 
-* Security features, hasing passwords BCrypt. 
+* Security features - use Spring Security with BCrypt for encrypting passwords 
 * Stats for Charts - simple proding of total amounts by currencies/countries. 
-* Charts for visualisation - D3 with Angular
-* Validation on currency use ISO, countries. 
+* Charts for visualisation - D3 charts with Angular or Google Visulization. 
+* Validation on currencies. 
 
 ## Authors
 
