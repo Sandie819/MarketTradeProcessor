@@ -16,7 +16,7 @@ Developer Challenge for Currency Fair. This is a spring boot application that ex
   
 ## Usage / End Points
 
-POST JSON messages to http://localhost:8080/api/v1/trademessage
+POST JSON messages to http://localhost:8080/api/v1/tradeMessage
 
  ```
 {
