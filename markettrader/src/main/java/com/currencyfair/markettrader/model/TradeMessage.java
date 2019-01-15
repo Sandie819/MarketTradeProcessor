@@ -13,9 +13,16 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+/**
+ * @author sandra.mulligan
+ * 
+ * <p>
+ * Model for the trade messages, provides basic validation on fields
+ */
 @Entity
 public class TradeMessage {
 
@@ -26,9 +33,11 @@ public class TradeMessage {
 	@NotNull(message="User ID cannot be missing or empty")
 	private String userId;
 	
+	@NotNull
 	@Size(min=3, max=3, message="Currency From must be three characters")
 	private String currencyFrom;
 	
+	@NotNull
 	@Size(min=3, max=3, message="Currency To must be three characters")
 	private String currencyTo;
 	
@@ -42,6 +51,7 @@ public class TradeMessage {
 	private double rate;
 	
 	@Past
+	@DateTimeFormat(pattern="dd-MMM-yy HH:mm:ss")
 	private Date timePlaced;
 	
 	@NotNull(message="Originating Country cannot be missing or empty")
