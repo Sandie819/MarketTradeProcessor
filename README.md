@@ -1,4 +1,4 @@
-# Marekt Trade Processor
+# Market Trade Processor
 
 Developer Challenge for Currency Fair. This is a spring boot application that exposes a rest endpoint to post market trades via a json request. The app consumes trade messages, processes them to an in-memory database and provides a simple frontend facility to view all consumed messages. 
 
