@@ -9,16 +9,15 @@
 
     <body>
       	<div id="logo">
-      		<span style="padding-right:3px; padding-top: 3px; display:inline-block;">
-				<img src="<c:url value='/images/currencyfair.png' />" />
-			</span>
+			<img src="<c:url value='/images/currencyfair.png' />" />
+			<br>
 		</div>	
 		
 		<div class="center section">
 			Market Trade Monitor
 		</div>
 		
-		<div class="center sectionContent">
+		<div class="center sectionContent tablediv">
 			<table>
 				<tr>
 					<th>User ID</th>
@@ -42,5 +41,6 @@
 				</c:forEach>
 			</table>
 		</div>	
+		
     </body>
 </html>

@@ -9,6 +9,5 @@ public class MarketTradeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MarketTradeApplication.class, args);
 	}
-
 }
 

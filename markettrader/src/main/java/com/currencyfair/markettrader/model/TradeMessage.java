@@ -1,12 +1,20 @@
 package com.currencyfair.markettrader.model;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Range;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class TradeMessage {
@@ -14,15 +22,31 @@ public class TradeMessage {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
+	
+	@NotNull(message="User ID cannot be missing or empty")
 	private String userId;
+	
+	@Size(min=3, max=3, message="Currency From must be three characters")
 	private String currencyFrom;
+	
+	@Size(min=3, max=3, message="Currency To must be three characters")
 	private String currencyTo;
+	
+	@Range(min = 0l, message = "Sell amount cannot be negative")
 	private BigDecimal amountSell;
+	
+	@Range(min = 0l, message = "Buy amount cannot be negative")
 	private BigDecimal amountBuy;
+	
+	@Positive
 	private double rate;
-	private LocalDateTime timePlaced;
+	
+	@Past
+	private Date timePlaced;
+	
+	@NotNull(message="Originating Country cannot be missing or empty")
 	private String originatingCountry;
-			
+		
 	public String getUserId() {
 		return userId;
 	}
@@ -60,13 +84,15 @@ public class TradeMessage {
 		this.rate = rate;
 	}	
 	
-	public LocalDateTime getTimePlaced() {
+	public Date getTimePlaced() {
 		return timePlaced;
 	}
 	
-	public void setTimePlaced(LocalDateTime timePlaced) {
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MMM-yy HH:mm:ss")
+	public void setTimePlaced(Date timePlaced) {
 		this.timePlaced = timePlaced;
 	}
+	
 	public String getOriginatingCountry() {
 		return originatingCountry;
 	}
