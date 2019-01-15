@@ -35,8 +35,13 @@ To View the consumed messages: http://localhost:8080/results
 
 ## Built With
 
-* [Spring Boot](https://spring.io/projects/spring-boot) - The main framework 
+* [Spring Boot](https://spring.io/projects/spring-boot)
 * [Maven](https://maven.apache.org/) - Dependency Management
+* [H2 Database](http://www.h2database.com/html/main.html) - In-Memory DB
+* [Spring JPA](https://spring.io/projects/spring-data-jpa) - Persistence
+* [Tomcat Jasper](https://javalibs.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper) - Embedded Container
+* HTML, CSS, JSP 
+
 
 
 ## Authors
